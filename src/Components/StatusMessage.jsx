@@ -1,6 +1,5 @@
-import { Fragment } from 'react';
-
-const StatusMessage = ({ winner, isNext, square }) => {
+const StatusMessage = ({ winner, gameBoard }) => {
+  const { square, isNext } = gameBoard;
   const noMovesLeft = square.every(squareValue => squareValue !== null);
   const nextPlayer = isNext ? 'X' : 'O';
   const renderStatusMessage = () => {
